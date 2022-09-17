@@ -4,8 +4,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "users#index"
-  #
-  if Rails.env.development? || Rails.env.test?
-    mount Checkpoint::Rails::Engine, at: "/checkpoint"
-  end
+  mount Checkpoint::Rails::Engine, at: "/checkpoint"
 end
